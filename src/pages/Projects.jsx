@@ -43,7 +43,7 @@ function Projects({bigFunc,smallFunc}) {
                                 <span className='tag'>BOOTSTRAP</span>
                                 <span className='tag'>JAVA</span>
                                 <span className='tag'>SPRING BOOT</span>
-                                <span className='tag'>SPRING JPA</span>
+                                <span className='tag'>SPRING DATA JPA</span>
                                 <span className='tag'>Spring Security/Jwt</span>
                                 <span className='tag'>MY SQL</span>
                             </div>

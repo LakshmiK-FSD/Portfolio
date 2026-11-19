@@ -61,7 +61,7 @@ function MySkills() {
               <div className="skill-tags">
                 <span className='tag'>JAVA</span>
                 <span className='tag'>Spring Boot</span>
-                <span className='tag'>Spring JPA</span>
+                <span className='tag'>Spring Data JPA</span>
                 <span className='tag'>Spring security/JWt</span>
                 <span className='tag'>Rest Api</span>
                 <span className='tag'>Servlet</span>
@@ -84,7 +84,6 @@ function MySkills() {
                 <span className='tag'>intellij</span>
                 <span className='tag'>eclipse</span>
                 <span className='tag'>postman</span>
-                <span className='tag'>MAVEN</span>
               </div>
             </div>
           </div>

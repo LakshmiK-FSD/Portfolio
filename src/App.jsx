@@ -8,7 +8,7 @@ import Projects from './pages/Projects'
 import MyCertifications from './pages/MyCertifications'
 import GetinTouch from './pages/GetinTouch'
 import { useEffect, useRef, useState } from 'react'
-import { use } from 'react'
+import Footer from './components/Footer'
 
 function App() {
   const arrowRef = useRef(null);
@@ -64,6 +64,7 @@ function App() {
       <div id="projects" className="projects"><Projects bigFunc={entering} smallFunc={leaving} /></div>
       <div id="mycertificat" className="projects"><MyCertifications /></div>
       <div id="getintouch" className="projects getin"><GetinTouch bigFunc={entering} smallFunc={leaving} /></div>
+      <div className="footer-contain"><Footer/></div>
       <div ref={arrowRef} className="mouse-round"></div>
       <div ref={dotRef} className="mouse-dot"></div>
     </div>

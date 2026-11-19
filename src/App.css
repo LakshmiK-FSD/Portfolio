@@ -85,15 +85,14 @@
 
 .header {
       padding-top: 1.4rem;
-      padding-bottom: 10px;
+      padding-bottom: 1px;
       padding-inline: 1%;
       width: 100%;
-      z-index: 100;
+      z-index: 10;
+      position: fixed;
       background-color: var(--bg-hero);
       box-shadow: 0 4px 40px rgba(0, 0, 0, 0.8);
-      position: fixed;
       backdrop-filter: blur(200px) saturate(800%);
-
       h2 {
             font-size: 25px;
       }
@@ -112,7 +111,6 @@
 
 .contents {
       width: 50vw;
-
       h4 {
             font-family: 'Cinzel', serif;
             color: white;
@@ -129,7 +127,17 @@
             backdrop-filter: blur(28px) saturate(160%);
       }
 }
-
+.my-skill{
+      animation: skill 0.9s ease-in-out;
+}
+@keyframes skill{
+      from{
+            transform: translateX(-90px);
+      }
+      to{
+            transform: translateX(0);
+      }
+}
 .boxdetail {
       min-height: 100vh;
       padding: 7rem 1.5rem 2rem;
