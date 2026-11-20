@@ -13,7 +13,7 @@ function useInView(ref,thresholder) {
       },
       { threshold: thresholder}
     );
-
+    
     if (ref.current) {
       observer.observe(ref.current);
     }

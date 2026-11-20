@@ -1,15 +1,30 @@
 import { Mail, BookDown } from "lucide-react";
 import svger from "../../public/favicon.svg"
-import { useEffect, useState } from "react";
-function Contents({ bigFunc, smallFunc }) {
+import { useEffect, useRef, useState } from "react";
+import useInView from "../hook/useInView";
+function Contents({ bigFunc, smallFunc,visibleFunc }) {
+  const ref = useRef(null);
   const [count, setCount] = useState(0);
   const [word, setWord] = useState(0);
   const [reverse, setReverse] = useState(false);
+  const [isVisible, setVisible] = useState(false);
   const [shSkill, setShSkill] = useState('');
   const skills = ["Java Full Stack Developer", "Java Backend Developer", "Junior Software Engineer", "Full Stack Web Developer"]
+
   useEffect(() => {
     const currentWord = skills[word];
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        visibleFunc(entry.isIntersecting);
+      }
+      else {
+        visibleFunc(false);
+      }
+    }, { threshold: 0.75 })
 
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
     if (!reverse && word >= skills.length) {
       setWord(0);
       setCount(0);
@@ -17,7 +32,7 @@ function Contents({ bigFunc, smallFunc }) {
     }
     if (!reverse && count < currentWord.length) {
       const time = setTimeout(() => {
-        const display = currentWord.slice(0, count+1);
+        const display = currentWord.slice(0, count + 1);
         setShSkill(display)
         setCount((c) => c + 1);
       }, 80)
@@ -25,28 +40,28 @@ function Contents({ bigFunc, smallFunc }) {
     }
     if (!reverse && count === currentWord.length) {
       const time2 = setTimeout(() => {
-       setReverse(true);
+        setReverse(true);
       }, 2000)
       return () => clearTimeout(time2);
     }
-    if ( reverse && count >0) {
+    if (reverse && count > 0) {
       const time3 = setTimeout(() => {
-        const display = currentWord.slice(0, count-1);
+        const display = currentWord.slice(0, count - 1);
         setShSkill(display)
         setCount((c) => c - 1)
       }, 40)
       return () => clearTimeout(time3);
     }
     if (reverse && count === 0) {
-      setWord(w=>w+1);
+      setWord(w => w + 1);
       setReverse(false);
-      return ;
+      return;
     }
   }
-    , [count, word,reverse])
+    , [count, word, reverse, isVisible])
   return (
     <div className="contents">
-      <h4>👋 WELCOME TO MY PORTFOLIO</h4>
+      <h4 ref={ref} >👋 WELCOME TO MY PORTFOLIO</h4>
       <div className="person">
         <h3 className="m-name">HI, I'M </h3>
       </div>

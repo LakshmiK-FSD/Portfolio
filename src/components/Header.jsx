@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 
-function Header({bigFunc,smallFunc}) {
+function Header({ bigFunc,smallFunc,headBar}) {
 
-       
+
 
     useEffect(() => {
+        
         console.log(
             "%c✦ LAKSHMI KANDAN L — Portfolio Loaded ✦",
             `
@@ -19,21 +20,25 @@ function Header({bigFunc,smallFunc}) {
     font-family: serif;
   `
         );
-    }, [])
+       console.log(headBar+"hello")
+    }, [headBar])
     return (
         <>
             <div>
-                <section className="header"><div className="d-flex justify-content-between"><h2 className="gradi">Lakshmi Kandan L</h2>
-                    <div className="navbarr"><ul className="flex-btw ctrl">
-                        <li><a onMouseMove={bigFunc} onMouseLeave={smallFunc} href="#content">HOME</a></li>
-                        <li><a onMouseMove={bigFunc} onMouseLeave={smallFunc} href="#aboutme">ABOUT</a></li>
-                        <li><a onMouseMove={bigFunc} onMouseLeave={smallFunc} href="#myskills">SKILLS</a></li>
-                        <li><a onMouseMove={bigFunc} onMouseLeave={smallFunc} href="#projects">PROJECTS</a></li>
-                        <li><a onMouseMove={bigFunc} onMouseLeave={smallFunc} href="#mycertificat">CERTIFICATIONS</a></li>
-                        <li><a onMouseMove={bigFunc} onMouseLeave={smallFunc} href="#getintouch">CONTACT</a></li>
-                    </ul>
-                        <div className="bttne">
-                            <a onMouseMove={bigFunc} onMouseLeave={smallFunc} href="#getintouch">HIRE ME</a></div></div></div>
+                <section className={`header ${!headBar?"scrll-styl":" "}`}>
+                    <div className="d-flex justify-content-between">
+                        <h2 className="gradi">Lakshmi Kandan L</h2>
+                        <div className="navbarr">
+                            <ul className="flex-btw ctrl">
+                                <li><a onMouseMove={bigFunc} onMouseLeave={smallFunc} href="#content">HOME</a></li>
+                                <li><a onMouseMove={bigFunc} onMouseLeave={smallFunc} href="#aboutme">ABOUT</a></li>
+                                <li><a onMouseMove={bigFunc} onMouseLeave={smallFunc} href="#myskills">SKILLS</a></li>
+                                <li><a onMouseMove={bigFunc} onMouseLeave={smallFunc} href="#projects">PROJECTS</a></li>
+                                <li><a onMouseMove={bigFunc} onMouseLeave={smallFunc} href="#mycertificat">CERTIFICATIONS</a></li>
+                                <li><a onMouseMove={bigFunc} onMouseLeave={smallFunc} href="#getintouch">CONTACT</a></li>
+                            </ul>
+                            <div className="bttne">
+                                <a onMouseMove={bigFunc} onMouseLeave={smallFunc} href="#getintouch">HIRE ME</a></div></div></div>
                 </section>
             </div>
         </>

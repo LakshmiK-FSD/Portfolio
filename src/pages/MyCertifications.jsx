@@ -32,6 +32,7 @@ function MyCertifications() {
                 </div>
                 <div className="cert-grid">
                     <div ref={ref1} onMouseLeave={(e)=>leaver(e,ref1)} onMouseMove={(e)=>hoveEnter(e,ref1)} className={`left-move ${isVisible?'original-move backd inline-pad':" "}`}>
+                        <div className="bar-grow"></div>
                         <div className="flexro">
                             <div className="yellow-box">
                                 <GlobeCode size={18} color="#000000" strokeWidth={2.25} />
@@ -66,6 +67,7 @@ function MyCertifications() {
                         </div>
                     </div>
                     <div ref={ref2} onMouseLeave={(e)=>leaver(e,ref2)} onMouseMove={(e)=>hoveEnter(e,ref2)}  className={`left-move ${isVisible?'original-move2 backd inline-pad':" "}`}>
+                        <div className="bar-grow"></div>
                         <div className="flexro">
                             <div className="yellow-box extrw" >
                                 <BookOpen size={14} color="#000" strokeWidth={3.25} />
@@ -96,6 +98,7 @@ function MyCertifications() {
                         </div>
                     </div>
                     <div ref={ref3} onMouseLeave={(e)=>leaver(e,ref3)} onMouseMove={(e)=>hoveEnter(e,ref3)} className={`left-move ${isVisible?'original-move3 backd inline-pad':" "}`}>
+                        <div className="bar-grow"></div>
                         <div className="flexro">
                             <div className="yellow-box">
                                 <CircuitBoard size={18} color="#000000" strokeWidth={2.25} />

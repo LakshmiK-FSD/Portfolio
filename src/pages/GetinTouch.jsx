@@ -9,10 +9,9 @@ function GetinTouch({bigFunc,smallFunc}) {
         <>
             <div ref={ref}>
                 <div className={`non ${isVisible ? 'mee' : ' '}`}>
-                    <div className={`hide ${isVisible ? 'head' : ' '}`}>Get In Touch</div>
-                    <div className={`nonn ${isVisible ? 'mee' : ' '}`}>
+                    <div className='head' >Get In Touch</div>
                         <UnderLine />
-                        <p className={`nonn ${isVisible ? 'imtxt' : ' '}`}>Ready to start your next project? Let's collaborate and create something amazing together.</p>
+                        <p className="imtxt" >Ready to start your next project? Let's collaborate and create something amazing together.</p>
                     </div>
                     <div className="flexro justbtw">
                         <div className={`left-move ${isVisible?"original-move emaill aligncent":" "}`}>
@@ -45,13 +44,12 @@ function GetinTouch({bigFunc,smallFunc}) {
                                 <input className="inputer" type="text" name="Phone No" placeholder="Your Phone" required />
                                 <input className="inputer" type="text" name="MailId" placeholder="Your MailID"  />
                                 <input className="inputer" type="text" name="Message" placeholder="Your Message"  required/>
-                                <button onMouseMove={bigFunc} onMouseLeave={smallFunc} type="submit" className="boxemoj bwh blck">SEND MESSAGE <i className="bi design bi-arrow-right-short"></i></button>
+                                <button onMouseMove={bigFunc} onMouseLeave={smallFunc} type="submit" className="boxemoj nrml-btn bwh blck">SEND MESSAGE <i className="bi design bi-arrow-right-short"></i></button>
                             </form>
 
                         </div>
                     </div>
                 </div>
-            </div>
         </>
     );
 }

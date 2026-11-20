@@ -9,8 +9,8 @@ function Footer(){
             </div>
             <div className="flexro gap-setter social-linkes" >
                 <a className="social-link" href="https://github.com/LakshmiK-FSD"><i className="bi bi-github making" ></i></a>
-                <a className="social-link" href="https://www.linkedin.com/in/lakshmikandan-ece/"><i class="bi bi-linkedin"></i></a>
-                <a className="social-link" href="#getintouch"><Mail size={18} color="#ffffff" strokeWidth={1.25} /></a>
+                <a className="social-link" href="https://www.linkedin.com/in/lakshmikandan-ece/"><i className="bi bi-linkedin"></i></a>
+                <a className="social-link" href="#getintouch"><Mail size={18} color="#a8a8a8" strokeWidth={1.25} /></a>
             </div>
             </div>
             </div>

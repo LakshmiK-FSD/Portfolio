@@ -19,16 +19,18 @@
       width: 58vw;
 
       a {
-            height:100% ;
+            height: 100%;
             font-size: 14px;
             align-self: center;
             color: var(--txt-clr);
             text-decoration: none;
       }
 }
-.bttne:hover{
+
+.bttne:hover {
       animation: none !important;
 }
+
 .navbarr {
       display: flex;
       flex-direction: row;
@@ -48,8 +50,8 @@
             animation: blinking 2s ease infinite;
 
             a {
-                  
-                  height:100% !important;
+
+                  height: 100% !important;
                   font-weight: 600;
                   margin-top: -1px;
                   color: #000000;
@@ -61,7 +63,7 @@
 
       a {
             display: flex;
-            height:100%;
+            height: 100%;
             font-weight: 400;
             align-items: center;
             align-self: center !important;
@@ -90,15 +92,36 @@
       width: 100%;
       z-index: 10;
       position: fixed;
-      background-color: var(--bg-hero);
-      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(200px) saturate(800%);
+
       h2 {
             font-size: 25px;
       }
 }
 
-.header::after {
+.scrll-styl {
+      background-color: var(--bg-hero);
+      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(200px) saturate(2%);
+}
+
+.scrll-styl::after {
+      position: absolute;
+      animation: borderFlow 0.3s ease-in-out;
+}
+
+@keyframes borderFlow {
+      0% {
+            border-bottom: 8px solid white;
+            width: 0;
+      }
+
+      100% {
+            border-bottom: 8px solid white;
+            width: 100%;
+      }
+}
+
+.scrll-styl::after {
       content: " ";
       position: absolute;
       bottom: 0;
@@ -111,6 +134,7 @@
 
 .contents {
       width: 50vw;
+
       h4 {
             font-family: 'Cinzel', serif;
             color: white;
@@ -127,17 +151,21 @@
             backdrop-filter: blur(28px) saturate(160%);
       }
 }
-.my-skill{
+
+.my-skill {
       animation: skill 0.9s ease-in-out;
 }
-@keyframes skill{
-      from{
+
+@keyframes skill {
+      from {
             transform: translateX(-90px);
       }
-      to{
+
+      to {
             transform: translateX(0);
       }
 }
+
 .boxdetail {
       min-height: 100vh;
       padding: 7rem 1.5rem 2rem;
@@ -189,7 +217,7 @@
 }
 
 .devinfo {
-      padding-block: 2rem;
+      padding-block: 1.5rem;
       max-width: 32rem;
       animation: fadeRight 0.5s ease-in-out;
 
@@ -267,7 +295,7 @@
 .btn2:hover {
       transform: translateY(10px);
 
- 
+
 
       .btnover {
             left: 220px;
@@ -309,6 +337,7 @@
       font-weight: 500;
       margin-block: 2rem;
       color: var(--txt-secondary);
+      padding-bottom: 4rem;
 }
 
 .mimgeconta {
@@ -340,7 +369,10 @@
       }
 
       p {
+            padding-block: 1rem;
+            font-size: 0.775rem;
             color: var(--txt-secondary);
+            line-height: 1.65;
             text-align: center;
       }
 
@@ -660,6 +692,7 @@
 
 .justbtw {
       justify-content: space-between;
+      padding-bottom: 5rem;
 }
 
 .inputer {
@@ -668,7 +701,7 @@
       background: rgba(244, 209, 68, 0.04);
       border: 1px solid rgba(244, 209, 68, 0.15);
       border-radius: 1px;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       color: #ffffff;
       outline: none;
 }
@@ -729,9 +762,39 @@
       background: #1a1a1af2;
       border: 1px solid rgba(244, 209, 68, 0.12);
       border-radius: 2px;
+      position: relative;
       padding: 1.5rem;
       backdrop-filter: blur(18px);
+      
 }
+.bar-grow{
+      content:" ";
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width:100%;
+      height: 3px;
+      transition:width 0.5s ease-in-out;
+}
+.backd .bar-grow::after{
+      content: " ";
+      position: absolute;
+      top: 0;
+      width:0;
+      height: 3px;
+      transition: width 0.5s ease-in-out;
+}
+.backd:hover .bar-grow::after{
+      content: " ";
+      position: absolute;
+      top: 0;
+      width:50%;
+      height: 3px;
+      background-color: #b89a1a;
+}
+
 
 .certificat-provider {
       font-weight: 600;
@@ -877,39 +940,41 @@
       display: block;
 }
 
-.project-name 
-{
+.project-name {
       padding: 1rem 0 0 1.4rem;
       font-family: 'Cinzel', serif;
       font-weight: 600;
       color: var(--txt-goldy);
       font-size: 1.3rem;
+}
+
+.ctrl {
+      a {
+            position: relative;
       }
-.ctrl{
-            a{
-                  position: relative;
-            }
-           a::after{
-                  content:" ";
-                  position: absolute;
-                  width: 0;
-                  bottom:-10px;
-                  height: 2px;
-                  background:var(--txt-goldy);
-                  transition: all 0.3s ease-in-out;  
-                  border-radius: 5px;
-            }
-  
-          a:hover::after{
-                  content:" ";
-                  position:absolute;
-                  bottom:-10px;
-                  height: 2px;
-                  width: 100%;
-                  transition: all 0.3s ease-in-out;    
-                  border-radius: 5px;
-            }
-            a:hover{
-                  color: var(--txt-goldy);
-            }
+
+      a::after {
+            content: " ";
+            position: absolute;
+            width: 0;
+            bottom: -10px;
+            height: 2px;
+            background: var(--txt-goldy);
+            transition: all 0.3s ease-in-out;
+            border-radius: 5px;
+      }
+
+      a:hover::after {
+            content: " ";
+            position: absolute;
+            bottom: -10px;
+            height: 2px;
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+            border-radius: 5px;
+      }
+
+      a:hover {
+            color: var(--txt-goldy);
+      }
 }
