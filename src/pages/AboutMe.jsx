@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import UnderLine from '../components/UnderLine'
+
 import { CodeXml, LayoutDashboard, Zap, UserRoundGroup } from 'lucide-react'
 import useInView from '../hook/useInView';
 import useRotater from '../hook/useRotater';
+import photo from '../assets/java.svg'
 function AboutMe() {
     const ref = useRef(null);
     const ref1 = useRef(null);
@@ -36,7 +38,9 @@ function AboutMe() {
                     <p className='imtxt'>I'm a passionate developer who loves turning complex
                         problems into simple, beautiful solutions.</p>
                     <div className="mimgeconta">
-                        <div className="imgs"></div>
+                        <div className="imgs">
+                            <img src={photo} alt="n" />
+                        </div>
                         <div className={isVisible ? "imgpara" : " "} >
                             <p>I'm a BE Electronics and Communication Engineering graduate from Government
                                 College of Engineering, Thanjavur. My ECE background gave me a solid
