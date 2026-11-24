@@ -103,7 +103,7 @@ function Particle() {
             const speedY = (Math.random() - 0.5) * 0.8;
             const xAxis = Math.random() * canvas.width;
             const yAxis = Math.random() * canvas.height;
-            const size = Math.floor(Math.random() * 2 + 0.5);
+            const size = Math.floor(Math.random() * 2 + 1);
             circles.push(new Circle(xAxis, yAxis, speedX, speedY, size));
         }
         const connectDist = 70;
@@ -119,7 +119,7 @@ function Particle() {
                         ctx.beginPath()
                         ctx.moveTo(a.x, a.y)
                         ctx.lineTo(b.x, b.y)
-                        ctx.strokeStyle = `rgba(212, 160, 23, 0.11`;
+                        ctx.strokeStyle = `rgba(212, 160, 23, 0.095`;
                         ctx.lineWidth = 0.5;
                         ctx.stroke();
 

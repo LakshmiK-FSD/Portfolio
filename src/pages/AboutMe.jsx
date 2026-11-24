@@ -4,14 +4,14 @@ import UnderLine from '../components/UnderLine'
 import { CodeXml, LayoutDashboard, Zap, UserRoundGroup } from 'lucide-react'
 import useInView from '../hook/useInView';
 import useRotater from '../hook/useRotater';
-import photo from '../assets/java.svg'
+import photo from '../assets/LakshmiKandan.jpg'
 function AboutMe() {
     const ref = useRef(null);
     const ref1 = useRef(null);
     const ref2 = useRef(null);
     const ref3 = useRef(null);
     const ref4 = useRef(null);
-    const [isVisible] = useInView(ref, 0.25);
+    const [isVisible] = useInView(ref, 0.45);
     function hoveEnter(e, xRef) {
         const [x, y] = useRotater(xRef, e);
         const angle = 15;
@@ -39,7 +39,8 @@ function AboutMe() {
                         problems into simple, beautiful solutions.</p>
                     <div className="mimgeconta">
                         <div className="imgs">
-                            <img src={photo} alt="n" />
+                            <img src={photo} alt="Lakshmikandan" />
+                            <div className="frame"></div>
                         </div>
                         <div className={isVisible ? "imgpara" : " "} >
                             <p>I'm a BE Electronics and Communication Engineering graduate from Government
