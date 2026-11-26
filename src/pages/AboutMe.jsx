@@ -11,7 +11,7 @@ function AboutMe() {
     const ref2 = useRef(null);
     const ref3 = useRef(null);
     const ref4 = useRef(null);
-    const [isVisible] = useInView(ref, 0.45);
+    const [isVisible] = useInView(ref, 0.40);
     function hoveEnter(e, xRef) {
         const [x, y] = useRotater(xRef, e);
         const angle = 15;

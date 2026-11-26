@@ -2,8 +2,11 @@ import { Mail, BookDown } from "lucide-react";
 import svger from "../../public/favicon.svg"
 import { useEffect, useRef, useState } from "react";
 import useInView from "../hook/useInView";
+import useRotater from "../hook/useRotater";
 function Contents({ bigFunc, smallFunc,visibleFunc }) {
   const ref = useRef(null);
+  const refGet = useRef(null);
+  const refRes = useRef(null);
   const [count, setCount] = useState(0);
   const [word, setWord] = useState(0);
   const [reverse, setReverse] = useState(false);
@@ -59,9 +62,17 @@ function Contents({ bigFunc, smallFunc,visibleFunc }) {
     }
   }
     , [count, word, reverse, isVisible])
+      function hoveEnter(e, xRef) {
+    const [x, y] = useRotater(xRef, e);
+    xRef.current.style.transform = `translate(${y * 10}px, ${x * 10}px)`
+  }
+  function leaver(e, xRef) {
+    xRef.current.style.transform = `translate(0,0)`
+  }
+
   return (
     <div className="contents">
-      <h4 ref={ref} >👋 WELCOME TO MY PORTFOLIO</h4>
+      <h4 ref={ref} className="welcome" ><span className="hand">👋</span> WELCOME TO MY PORTFOLIO</h4>
       <div className="person">
         <h3 className="m-name">HI, I'M </h3>
       </div>
@@ -75,8 +86,8 @@ function Contents({ bigFunc, smallFunc,visibleFunc }) {
           and continuously improving my development skills.</p>
       </div>
       <div className="twbtn">
-        <a onMouseMove={bigFunc} onMouseLeave={smallFunc} className="btn1" id="anchor" href="#getintouch"><Mail size={19} color="#000000" strokeWidth={2.25} />GET IN TOUCH</a>
-        <a onMouseMove={bigFunc} onMouseLeave={smallFunc} href={svger} download={"my.svg"} className="btn2"><BookDown size={19} color="#c8a820" strokeWidth={2.25} />VIEW RESUME<div className="btnover"> </div></a>
+        <a ref={refGet} onMouseMove={(e)=>{bigFunc(); hoveEnter(e,refGet)}} onMouseLeave={(e)=>{smallFunc(); leaver(e,refGet)}} className="btn1" id="anchor" href="#getintouch"><Mail size={19} color="#000000" strokeWidth={2.25} />GET IN TOUCH</a>
+        <a ref={refRes} onMouseMove={(e)=>{bigFunc(); hoveEnter(e,refRes)}} onMouseLeave={(e)=>{smallFunc(); leaver(e,refRes)}} href={svger} download={"my.svg"} className="btn2"><BookDown size={19} color="#c8a820" strokeWidth={2.25} />VIEW RESUME<div className="btnover"> </div></a>
       </div>
     </div>
 

@@ -72,8 +72,10 @@ function Projects({bigFunc,smallFunc}) {
                         <div className="px-4 widther">
                             <h5 className="certificat-tittle pt-4 glower project-title">Online Health Care </h5>
                             <ul className="project-info">
-                                <li>LKHealthcare, a healthcare website using Java Servlets and JSP for server-side dynamic page rendering and request handling.</li>
-                                <li>Implemented form submission and server-side processing with Servlets, handling user input and displaying dynamic responses via JSP.</li>
+                                <li>LKHealthcare, a healthcare website using Java Servlets and JSP for server-side
+                                     dynamic page rendering and request handling.</li>
+                                <li>Implemented server-side form processing with Java Servlets to enable patients to book
+                                     appointments and allow administrators to view and manage patient bookings.</li>
                                 <li>Structured the application with a basic MVC-style flow.</li>
                             </ul>
                             <div className="skill-tags">

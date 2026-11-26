@@ -252,9 +252,7 @@
       gap: 10px;
       background: var(--bg-hero);
       background: var(--bg-btn);
-      transition: all 0.5s ease-in-out;
-
-
+      transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       font-weight: 600;
       color: black;
       text-decoration: none;
@@ -262,7 +260,6 @@
 }
 
 .btn1:hover {
-      transform: translateY(10px);
       box-shadow: 0 0 40px rgba(196, 180, 11, 0.8);
 }
 
@@ -276,7 +273,6 @@
       overflow: hidden;
       z-index: 2;
       position: relative;
-      transition: all 0.9s ease;
       text-decoration: none;
 }
 
@@ -293,10 +289,6 @@
 }
 
 .btn2:hover {
-      transform: translateY(10px);
-
-
-
       .btnover {
             left: 220px;
       }
@@ -975,5 +967,31 @@
 
       a:hover {
             color: var(--txt-goldy);
+      }
+}
+.bottom{
+      transform: translateX(-90px);
+      opacity:0;
+}
+.bottom-right{
+      transform: translateX(90px);
+      opacity:0;
+}
+.stable{
+      transform: translateX(0);
+      opacity:1;
+      transition: all 1.3s ease-in-out 0.1s;
+}
+.welcome{
+      animation:normaler 0.5s ease-in-out;
+} 
+@keyframes normaler {
+      from{
+            transform: translateX(-90px);
+            opacity:0;
+      }
+      to{
+            transform: translateX(0);
+            opacity:1;
       }
 }

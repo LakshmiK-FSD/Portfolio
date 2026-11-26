@@ -369,6 +369,7 @@ body {
 
 .original-stater {
     opacity: 1 !important;
+    transition: all 1.2s ease-in-out;
 
 }
 
