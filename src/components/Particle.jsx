@@ -60,10 +60,8 @@ function Particle() {
                     }
                     if (mouse.radius < dist) {
                         this.dx += (this.stableX - this.dx) * 0.05;
-                        this.dy += (this.stableY - this.dy) * 0.05;
-                        
+                        this.dy += (this.stableY - this.dy) * 0.05;   
                     }
-
                 }
                 this.opacity += this.opacitySpeed * this.opacityDir;
                 if (this.opacity >= 0.6) this.opacityDir = -1;
@@ -84,7 +82,6 @@ function Particle() {
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${this.opacity})`;
                 ctx.fill();
-
 
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size * 3, 0, Math.PI * 2);

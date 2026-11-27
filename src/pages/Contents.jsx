@@ -38,7 +38,7 @@ function Contents({ bigFunc, smallFunc,visibleFunc }) {
         const display = currentWord.slice(0, count + 1);
         setShSkill(display)
         setCount((c) => c + 1);
-      }, 80)
+      }, 85)
       return () => clearTimeout(time);
     }
     if (!reverse && count === currentWord.length) {
@@ -52,7 +52,7 @@ function Contents({ bigFunc, smallFunc,visibleFunc }) {
         const display = currentWord.slice(0, count - 1);
         setShSkill(display)
         setCount((c) => c - 1)
-      }, 40)
+      }, 30)
       return () => clearTimeout(time3);
     }
     if (reverse && count === 0) {
@@ -87,7 +87,7 @@ function Contents({ bigFunc, smallFunc,visibleFunc }) {
       </div>
       <div className="twbtn">
         <a ref={refGet} onMouseMove={(e)=>{bigFunc(); hoveEnter(e,refGet)}} onMouseLeave={(e)=>{smallFunc(); leaver(e,refGet)}} className="btn1" id="anchor" href="#getintouch"><Mail size={19} color="#000000" strokeWidth={2.25} />GET IN TOUCH</a>
-        <a ref={refRes} onMouseMove={(e)=>{bigFunc(); hoveEnter(e,refRes)}} onMouseLeave={(e)=>{smallFunc(); leaver(e,refRes)}} href={svger} download={"my.svg"} className="btn2"><BookDown size={19} color="#c8a820" strokeWidth={2.25} />VIEW RESUME<div className="btnover"> </div></a>
+        <a ref={refRes} onMouseMove={(e)=>{bigFunc(); hoveEnter(e,refRes)}} onMouseLeave={(e)=>{smallFunc(); leaver(e,refRes)}} href="https://drive.google.com/file/d/19PTX_8p0pVtnc_TimGFlSGYg1nHXtHYS/view?usp=sharing"  className="btn2"><BookDown size={19} color="#c8a820" strokeWidth={2.25} />VIEW RESUME<div className="btnover"> </div></a>
       </div>
     </div>
 

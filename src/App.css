@@ -514,7 +514,7 @@
 .myskills,
 .projects {
       padding-top: 6rem;
-      background:radial-gradient(ellipse, rgba(244, 209, 68, 0.03) 0%, transparent 65%);
+      background: radial-gradient(ellipse, rgba(244, 209, 68, 0.03) 0%, transparent 65%);
       min-height: 150vh;
 }
 
@@ -757,31 +757,34 @@
       position: relative;
       padding: 1.5rem;
       backdrop-filter: blur(18px);
-      
+
 }
-.bar-grow{
-      content:" ";
+
+.bar-grow {
+      content: " ";
       display: flex;
       justify-content: center;
       position: absolute;
       top: 0;
       left: 0;
-      width:100%;
+      width: 100%;
       height: 3px;
 }
-.backd .bar-grow::after{
+
+.backd .bar-grow::after {
       content: " ";
       position: absolute;
       top: 0;
-      width:0;
+      width: 0;
       height: 3px;
       transition: width 0.3s ease-in-out;
 }
-.backd:hover .bar-grow::after{
+
+.backd:hover .bar-grow::after {
       content: " ";
       position: absolute;
       top: 0;
-      width:50%;
+      width: 50%;
       height: 3px;
       background-color: #b89a1a;
 }
@@ -969,29 +972,99 @@
             color: var(--txt-goldy);
       }
 }
-.bottom{
+
+.bottom {
       transform: translateX(-90px);
-      opacity:0;
+      opacity: 0;
 }
-.bottom-right{
+
+.bottom-right {
       transform: translateX(90px);
-      opacity:0;
+      opacity: 0;
 }
-.stable{
+
+.stable {
       transform: translateX(0);
-      opacity:1;
+      opacity: 1;
       transition: all 1.3s ease-in-out 0.1s;
 }
-.welcome{
-      animation:normaler 0.5s ease-in-out;
-} 
+
+.welcome {
+      animation: normaler 0.5s ease-in-out;
+}
+
 @keyframes normaler {
-      from{
+      from {
             transform: translateX(-90px);
-            opacity:0;
+            opacity: 0;
       }
-      to{
+
+      to {
             transform: translateX(0);
-            opacity:1;
+            opacity: 1;
+      }
+}
+
+.fl {
+      animation: fl 4s ease-in-out infinite
+}
+
+.fl2 {
+      animation-delay: -1.3s
+}
+
+.fl3 {
+      animation-delay: -2.6s
+}
+
+@keyframes fl {
+
+      0%,
+      100% {
+            transform: translateY(0)
+      }
+
+      50% {
+            transform: translateY(-12px)
+      }
+}
+
+.blink {
+      animation: bl 5s infinite;
+      transform-origin: center;
+      transform-box: fill-box;
+}
+
+@keyframes bl {
+
+      0%,
+      92%,
+      100% {
+            transform: scaleY(1)
+      }
+
+      96% {
+            transform: scaleY(0.1)
+      }
+}
+
+.profile {
+      padding-right: 60px;
+      animation: baseReturn 0.8s ease-in-out;
+}
+@keyframes baseReturn {
+      from {
+            transform: translateX(90px);
+            opacity: 0;
+      }
+
+      to {
+            transform: translateX(0);
+            opacity: 1;
+      }
+}
+@media (max-width:980px) {
+      .profile {
+            display: none;
       }
 }
